@@ -37,4 +37,41 @@ There is a maximum of 10,000 unique station names.
 
 Implementations must not rely on specifics of a given data set. Any valid station name as per the constraints above and any data distribution (number of measurements per station) must be supported.
 
+## Getting started
 
+1. **Set up development environment**: In VS Code, reopen the folder in a container using the Dev Containers extension. This ensures you have a consistent development environment with all necessary tools.
+
+2. **Generate test data**: Create test data files by running the data generator:
+   ```bash
+   python create_measurements.py <number_of_rows>
+   ```
+   For example, to start with 1 million rows for testing:
+   ```bash
+   python create_measurements.py 1_000_000
+   ```
+   Note: The ultimate goal is to handle 1 billion rows, but start smaller for development and testing.
+
+3. **Set up your solution file**: Rename the `entries/RENAME_ME.py` file to `entries/firstname_lastname.py` using your actual first and last name.
+
+   Note: If you want to create multiple versions of your solution you can do so by adding a `_v1/_v2/..` suffix. 
+
+4. **Implement your solution**: Start implementing the logic in your renamed file. The file should read the measurements and output the min, mean, and max temperature per station.
+
+5. **Test your implementation**: Run your solution using:
+   ```bash
+   python entries/your_file.py measurements/path_to_measurements_file
+   ```
+   For example:
+   ```bash
+   python entries/firstname_lastname.py measurements/measurements-1_000_000.txt
+   ```
+
+6. **Python interpreters available**:
+   - CPython v3.12 is available as `python3.12`
+   - PyPy 3.9 is available as `pypy3.9`
+   
+   You can test performance differences between interpreters by running your solution with different Python versions.
+
+7. **Submit your solution**: Once you're satisfied with your implementation, submit your solution by pushing your changes to the repository.
+
+Remember to test with progressively larger datasets as you optimize your solution, working your way up to the ultimate goal of processing 1 billion rows efficiently!
