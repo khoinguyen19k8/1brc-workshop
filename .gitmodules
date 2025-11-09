@@ -1,0 +1,3 @@
+[submodule "1brc-solution"]
+	path = 1brc-solution
+	url = git@github.com:GerardD95/1brc-solution.git
